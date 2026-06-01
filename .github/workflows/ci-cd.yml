@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: [ main ]
   workflow_dispatch:
+    inputs:
+      version:
+        description: 'Версия образа для production (тег)'
+        required: false
+        default: 'latest'
 
 jobs:
   build-and-test:
